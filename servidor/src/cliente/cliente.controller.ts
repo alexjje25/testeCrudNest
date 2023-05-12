@@ -16,7 +16,10 @@ export class ClienteController {
       throw new BadRequestException('O nome deve conter no minimo 2 caracteres e no maximo 100 caracteres');
     }
     if (createClienteDto.birthdate.length < 1) {
-      throw new BadRequestException('birthdate é obrogatorio');
+      throw new BadRequestException('Data de nascimento é obrogatoria');
+    }
+    if (createClienteDto.zipcode.length < 8) {
+      throw new BadRequestException('O cep é obrigatorio, Preencha corretamente');
     }
 
     return this.clienteService.create(createClienteDto);
