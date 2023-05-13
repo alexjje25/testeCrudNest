@@ -19,3 +19,5 @@ $ npm run start:dev
 ## Swagger
 http://localhost:3001/api
 
+## BD
+Foi utilizado banco de dados my sql worlbenche para rodar a aplicação
